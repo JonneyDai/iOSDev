@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,14 +19,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    //以下是使用XIB文件描述界面需要添加的语句
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+//    
+//    UIViewController *test = [[UIViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+//    
+////    UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:test];//设置导航栏
+////    self.window.rootViewController = nav;
+////
+//    self.window.rootViewController = test;
+    //构建ViewController对象并通过init初始化该对象，通过initWithNibName:bundle:方法加载Nib文件
+    ViewController *quizVC = [[ViewController alloc]init];
     
-    UIViewController *test = [[UIViewController alloc]     initWithNibName:@"ViewController" bundle:nil];
+    //将他设置为UIwindow对象的根视图控制器
+    self.window.rootViewController = quizVC;
     
-    UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:test];
-    self.window.rootViewController = nav;
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
     

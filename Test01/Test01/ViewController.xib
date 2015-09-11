@@ -14,10 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4of-Qd-aOI">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4of-Qd-aOI">
                     <rect key="frame" x="8" y="84" width="600" height="167"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3h-ac-OEk">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3h-ac-OEk">
                             <rect key="frame" x="101" y="69" width="398" height="30"/>
                             <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Button">
@@ -26,9 +26,20 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="E3h-ac-OEk" firstAttribute="top" secondItem="4of-Qd-aOI" secondAttribute="top" constant="69" id="8Z4-3i-BCB"/>
+                        <constraint firstAttribute="centerX" secondItem="E3h-ac-OEk" secondAttribute="centerX" id="NmQ-Fd-tdY"/>
+                        <constraint firstAttribute="trailing" secondItem="E3h-ac-OEk" secondAttribute="trailing" constant="101" id="RKQ-7v-U4e"/>
+                        <constraint firstItem="E3h-ac-OEk" firstAttribute="leading" secondItem="4of-Qd-aOI" secondAttribute="leading" constant="101" id="f9p-I3-MUe"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4of-Qd-aOI" secondAttribute="trailing" constant="-8" id="1Ar-sZ-qxg"/>
+                <constraint firstItem="4of-Qd-aOI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="49N-Rq-BnY"/>
+                <constraint firstItem="4of-Qd-aOI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="nWU-pG-XLw"/>
+            </constraints>
         </view>
     </objects>
 </document>

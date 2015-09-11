@@ -20,19 +20,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //使用XIB时必须添加以下代码
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+//    ============================================================================================================
+//    //使用XIB时必须添加以下代码
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+//    
+//    UIViewController *test = [[UIViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+//    
+//    //UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:test];//使用导航栏
+//   // self.window.rootViewController = nav;
+//    
+//    self.window.rootViewController = test;
+//    
+//    [self.window makeKeyAndVisible];
+//    //到此处
+//    return YES;
+//    ============================================================================================================
+
     
-    UIViewController *test = [[UIViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    
-    //UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:test];//使用导航栏
-   // self.window.rootViewController = nav;
+    self.window= [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+   
+    UIViewController *test = [[UIViewController alloc]initWithNibName:@"ViewController" bundle:nil];
     
     self.window.rootViewController = test;
     
     [self.window makeKeyAndVisible];
-    //到此处
-    return YES;
+    
+    return  YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
