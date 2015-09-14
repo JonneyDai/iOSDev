@@ -82,11 +82,27 @@
     NSArray *randomNounList = @[@"Bear", @"Spork", @"Mac"];
     
     //根据数组对象所含对象的个数，得到随机索引
+    //运算符%是模运算符，运算后的得到的是余数，因此adjectiveIndex是一个0到2（含2）的随机数
     //NSInteger是一种针对unsigned long的类型定义
-    NSInteger adjectiveIndex = arc4random()%[randomAdjectiveList count];
-    NSInteger nounIndex = arc4random()%[randomNounList count];
+    NSInteger adjectiveIndex = arc4random() % [randomAdjectiveList count];
+    NSInteger nounIndex = arc4random() % [randomNounList count];
     
-    NSString *randomName = [NSString ]
+    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
+                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
+                            [randomNounList objectAtIndex:nounIndex]];
+    
+    int randomValue = arc4random() % 1000;
+    
+    NSString *randomSerialNumber = [NSString stringWithFormat:@"%c%c%c%c%c",
+                                   '0' + arc4random() % 10,
+                                   'A' + arc4random() % 26,
+                                   '0' + arc4random() % 10,
+                                   'A' + arc4random() % 26,
+                                   '0' + arc4random() % 10];
+    BNRItem *newItem = [[self alloc]initWithItemName:randomName
+                                      valueInDollars:randomValue
+                                        serialNumber:randomSerialNumber];
+    return  newItem;
     
 }
 

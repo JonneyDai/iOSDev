@@ -16,23 +16,23 @@ int main(int argc, const char * argv[]) {
         
         //创建NSMutableArray对象，并用items变量保存该对象的地址；
         NSMutableArray *items = [[NSMutableArray alloc]initWithCapacity:10];
-        //向items所指向的NSMutableArray对象发送addObject:消息，每次传入一个字符串
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
-        [items addObject:@"Three"];
-        //继续向同一个对象发送添加消息
-        [items insertObject:@"Zero" atIndex:0];
-        
-        //使用for循环实现遍历数组
-//        for (int i = 0; i < [items count]; i++) {
-//            NSString *item = [items objectAtIndex:i];
+//        //向items所指向的NSMutableArray对象发送addObject:消息，每次传入一个字符串
+//        [items addObject:@"One"];
+//        [items addObject:@"Two"];
+//        [items addObject:@"Three"];
+//        //继续向同一个对象发送添加消息
+//        [items insertObject:@"Zero" atIndex:0];
+//        
+//        //使用for循环实现遍历数组
+////        for (int i = 0; i < [items count]; i++) {
+////            NSString *item = [items objectAtIndex:i];
+////            NSLog(@"%@",item);
+////        }
+//        
+//        //使用快速枚举实现遍历items数组中的每一个item
+//        for (NSString *item in items){
 //            NSLog(@"%@",item);
 //        }
-        
-        //使用快速枚举实现遍历items数组中的每一个item
-        for (NSString *item in items){
-            NSLog(@"%@",item);
-        }
         
 //        //使用id快速遍历存储不同类型对象的数组
 //        for(id item in items){
@@ -58,23 +58,34 @@ int main(int argc, const char * argv[]) {
 //        item.valueInDollars = 100;
 //        
         //创建BNRItem对象并初始化
-        BNRItem *item = [[BNRItem alloc]initWithItemName:@"Red Sofa"
-                                          valueInDollars:100
-                                            serialNumber:@"A1B2C"];
+//        BNRItem *item = [[BNRItem alloc]initWithItemName:@"Red Sofa"
+//                                          valueInDollars:100
+//                                            serialNumber:@"A1B2C"];
+//        
+//       
+////        //打印item实例对象的值
+////        NSLog(@"%@ %@ %@ %d",item.itemName,item.dateCreated,item.serialNumber,item.valueInDollars);
+////
+//        
+//        //程序会先调用相应实参的description方法，然后用返回的字符串替换%@
+//        NSLog(@"%@",item);
+//        
+//        BNRItem *itemWithName = [[BNRItem alloc]initWithItemName:@"Blue Sofa"];
+//        NSLog(@"%@",itemWithName);
+//        
+//        BNRItem *itemWithNoName = [[BNRItem alloc]init];
+//        NSLog(@"%@",itemWithNoName);
         
-       
-//        //打印item实例对象的值
-//        NSLog(@"%@ %@ %@ %d",item.itemName,item.dateCreated,item.serialNumber,item.valueInDollars);
-//
+        //创建10个BNRItem对象
+        for (int i = 0; i < 10; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            [items addObject:item];
+        }
         
-        //程序会先调用相应实参的description方法，然后用返回的字符串替换%@
-        NSLog(@"%@",item);
         
-        BNRItem *itemWithName = [[BNRItem alloc]initWithItemName:@"Blue Sofa"];
-        NSLog(@"%@",itemWithName);
-        
-        BNRItem *itemWithNoName = [[BNRItem alloc]init];
-        NSLog(@"%@",itemWithNoName);
+        for (BNRItem *item in items){
+            NSLog(@"%@",item);
+        }
         //释放items所指向的nsmutablearray对象
         items = nil;
         
