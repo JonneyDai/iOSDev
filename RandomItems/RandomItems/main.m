@@ -16,6 +16,7 @@ int main(int argc, const char * argv[]) {
         
         //创建NSMutableArray对象，并用items变量保存该对象的地址；
         NSMutableArray *items = [[NSMutableArray alloc]initWithCapacity:10];
+        
 //        //向items所指向的NSMutableArray对象发送addObject:消息，每次传入一个字符串
 //        [items addObject:@"One"];
 //        [items addObject:@"Two"];
@@ -82,10 +83,19 @@ int main(int argc, const char * argv[]) {
             [items addObject:item];
         }
         
+//        //添加异常
+//        id lastObj = [items lastObject];
+//        [lastObj count];
         
         for (BNRItem *item in items){
             NSLog(@"%@",item);
         }
+        
+        
+//        //初级练习，让items返回第十一个对象，并抛出异常
+//        NSLog(@"%@",items[10]);
+//
+        
         //释放items所指向的nsmutablearray对象
         items = nil;
         

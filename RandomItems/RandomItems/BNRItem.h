@@ -26,6 +26,10 @@
 //BNRItem类第二种初始化方法
 -(instancetype) initWithItemName:(NSString *)name;
 
+//BNRItem类第三个初始化方法
+-(instancetype) initWithItemName:(NSString *) name
+                    serialNumber:(NSString *) sNumber;
+
 -(void) setItemName:(NSString *) str;
 -(NSString *) itemName;
 

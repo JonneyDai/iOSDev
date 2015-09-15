@@ -35,6 +35,12 @@
                       serialNumber:@""];
 }
 
+-(instancetype) initWithItemName:(NSString *)name serialNumber:(NSString *)sNumber{
+    return [self initWithItemName:name
+                   valueInDollars:0
+                     serialNumber:sNumber];
+}
+
 -(instancetype) init{
     return [self initWithItemName:@"Item"];
 }
@@ -87,9 +93,13 @@
     NSInteger adjectiveIndex = arc4random() % [randomAdjectiveList count];
     NSInteger nounIndex = arc4random() % [randomNounList count];
     
+//    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
+//                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
+//                            [randomNounList objectAtIndex:nounIndex]];
+    
     NSString *randomName = [NSString stringWithFormat:@"%@ %@",
-                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
-                            [randomNounList objectAtIndex:nounIndex]];
+                            randomAdjectiveList[adjectiveIndex],
+                            randomNounList[nounIndex]];
     
     int randomValue = arc4random() % 1000;
     

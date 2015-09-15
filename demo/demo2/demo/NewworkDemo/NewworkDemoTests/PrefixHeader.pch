@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  NewworkDemo
+//
+//  Created by gree's apple on 10/9/15.
+//  Copyright (c) 2015年 WJF. All rights reserved.
+//
+
+//主要用于数据处理完成后，反馈给上层用以更高处理的事件
+
+#ifndef NewworkDemo_PrefixHeader_pch
+#define NewworkDemo_PrefixHeader_pch
+
+
+
+#endif
