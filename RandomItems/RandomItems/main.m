@@ -77,11 +77,25 @@ int main(int argc, const char * argv[]) {
 //        BNRItem *itemWithNoName = [[BNRItem alloc]init];
 //        NSLog(@"%@",itemWithNoName);
         
-        //创建10个BNRItem对象
-        for (int i = 0; i < 10; i++) {
-            BNRItem *item = [BNRItem randomItem];
-            [items addObject:item];
-        }
+//        //创建10个BNRItem对象
+//        for (int i = 0; i < 10; i++) {
+//            BNRItem *item = [BNRItem randomItem];
+//            [items addObject:item];
+//        }
+
+        
+        //测试强引用循环导致内存泄露
+        BNRItem *backpack = [[BNRItem alloc]initWithItemName:@"Backpack"];
+        [items addObject:backpack];
+        
+        BNRItem *calculator = [[BNRItem alloc]initWithItemName:@"Calculator"];
+        [items addObject:calculator];
+        backpack.containedItem = calculator;
+        
+        backpack = nil;
+        calculator = nil;
+        //end
+        
         
 //        //添加异常
 //        id lastObj = [items lastObject];
@@ -96,6 +110,8 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%@",items[10]);
 //
         
+        
+        NSLog(@"Setting items to nil...");
         //释放items所指向的nsmutablearray对象
         items = nil;
         

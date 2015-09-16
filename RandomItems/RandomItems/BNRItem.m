@@ -45,30 +45,54 @@
     return [self initWithItemName:@"Item"];
 }
 
--(void) setItemName:(NSString *)str{
-    _itemName = str;
-}
--(NSString *) itemName{
-    return  _itemName;
-}
+//-(void) setItemName:(NSString *)str{
+//    _itemName = str;
+//}
+//-(NSString *) itemName{
+//    return  _itemName;
+//}
+//
+//-(void) setSerialNumber:(NSString *)str{
+//    _serialNumber = str;
+//}
+//-(NSString *) serialNumber{
+//    return _serialNumber;
+//}
+//
+//-(void) setValueInDollars:(int)v{
+//    _valueInDollars = v;
+//}
+//-(int) valueInDollars{
+//    return  _valueInDollars;
+//}
+//
+//-(NSDate *) dateCreated{
+//    return  _dateCreated;
+//}
 
--(void) setSerialNumber:(NSString *)str{
-    _serialNumber = str;
-}
--(NSString *) serialNumber{
-    return _serialNumber;
-}
+//
+////测试强引用循环问题
+//
+//-(void) setContainedItem:(BNRItem *)item{
+//    _containedItem = item;
+//    
+//    //将item加入容纳它的BNRItem对象时，会将它的container实例变量指向容纳它的对象
+//    item.container = self;
+//}
+//
+//-(BNRItem *)containedItem{
+//    return _containedItem;
+//}
+//
+//-(void) setContainer:(BNRItem *)item{
+//    _container = item;
+//}
+//
+//-(BNRItem *) container{
+//    return  _container;
+//}
 
--(void) setValueInDollars:(int)v{
-    _valueInDollars = v;
-}
--(int) valueInDollars{
-    return  _valueInDollars;
-}
-
--(NSDate *) dateCreated{
-    return  _dateCreated;
-}
+//end
 
 -(NSString *) description{
     NSString *descriptionString = [[NSString alloc] initWithFormat:@"%@(%@):Worth $%d,recorded on %@",
@@ -114,6 +138,11 @@
                                         serialNumber:randomSerialNumber];
     return  newItem;
     
+}
+
+
+-(void) dealloc{
+    NSLog(@"Destory: %@",self);
 }
 
 @end
