@@ -15,7 +15,7 @@
 		0A7F27111BB4E13300356741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F270F1BB4E13300356741 /* LaunchScreen.storyboard */; };
 		0A7F271C1BB4E13300356741 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F271B1BB4E13300356741 /* HypnosisterTests.m */; };
 		0A7F27271BB4E13300356741 /* HypnosisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F27261BB4E13300356741 /* HypnosisterUITests.m */; };
-		0A7F27361BB4E5BB00356741 /* HypnosisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F27351BB4E5BB00356741 /* HypnosisterView.m */; settings = {ASSET_TAGS = (); }; };
+		0A7F27361BB4E5BB00356741 /* HypnosisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F27351BB4E5BB00356741 /* HypnosisterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hypnosister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greeDev12.Hypnosister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hypnosister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greeDev12.Hypnosister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +504,7 @@
 				0A7F272D1BB4E13300356741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A7F272E1BB4E13300356741 /* Build configuration list for PBXNativeTarget "HypnosisterTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +513,7 @@
 				0A7F27301BB4E13300356741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A7F27311BB4E13300356741 /* Build configuration list for PBXNativeTarget "HypnosisterUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +522,7 @@
 				0A7F27331BB4E13300356741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

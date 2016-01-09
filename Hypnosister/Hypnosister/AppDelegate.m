@@ -8,9 +8,11 @@
 
 #import "AppDelegate.h"
 #import "HypnosisterView.h"
-#import "ViewController.h"
+#import "ViewController.h"   //主界面视图控制器
 
-@interface AppDelegate ()
+@interface AppDelegate () <UIScrollViewDelegate>
+
+//@property (nonatomic) HypnosisterView *hypnosisView;
 
 @end
 
@@ -18,21 +20,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     //创建UIwindow
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    //添加根视图控制器
+    
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+//    bigRect.size.height *= 2.0;
+    
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:screenRect];
+    [scrollView setPagingEnabled:YES];
+    scrollView.delegate = self;
+    
+    [self.window addSubview:scrollView];
+    
+    HypnosisterView *hypnosisView = [[HypnosisterView alloc]initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    screenRect.origin.x += screenRect.size.width;
+    HypnosisterView *anotherView = [[HypnosisterView alloc]initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    scrollView.contentSize = bigRect.size;
+    
+    //添加根视图控制器，否则提示异常，不可正常显示。
     ViewController *hvc = [[ViewController alloc]init];
     self.window.rootViewController = hvc;
     
-    //第一个子视图
-    //CGRect firstFrame = CGRectMake(16, 24, 10, 15);
-    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
-    //CGRect firstFrame = self.window.bounds;//充满整个屏幕
-    HypnosisterView *firstView = [[HypnosisterView alloc]initWithFrame:firstFrame];
+    //添加第一个子视图
+//    CGRect firstFrame = self.window.bounds;//充满整个屏幕
+//    HypnosisterView *firstView = [[HypnosisterView alloc]initWithFrame:firstFrame];
     
-    firstView.backgroundColor = [UIColor redColor];
-    [self.window addSubview: firstView];
+//    [self.window addSubview: firstView];
     
 //    //第二个子视图
 //    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
@@ -45,6 +64,11 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+//-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+//{
+//    return ;
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
