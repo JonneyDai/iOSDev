@@ -21,6 +21,24 @@
 
 @implementation ViewController
 
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    //调用父类实现的初始化方法
+    self = [super initWithNibName:@"ViewController"bundle:nil];
+    
+    //创建question和answer数组
+    if (self) {
+        self.questions = @[@"From what is cognac made?",
+                           @"What is 7 + 7?",
+                           @"What is the capital of Vermont?"];
+        
+        self.answers = @[@"Grapes",
+                         @"14",
+                         @"Monpelier"];
+    }
+    //返回新对象的地址
+    return  self;
+}
+
 -(IBAction)showQuestion:(id)sender{
     //进入下一个问题
     self.currentQuestionIndex++;
@@ -46,24 +64,6 @@
     //在答案标签上显示相应的答案
     self.answerLabel.text = answer;
     
-}
-
--(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    //调用父类实现的初始化方法
-    self = [super initWithNibName:@"ViewController"bundle:nil];
-    
-    //创建question和answer数组
-    if (self) {
-        self.questions = @[@"From what is cognac made?",
-                           @"What is 7 + 7?",
-                           @"What is the capital of Vermont?"];
-        
-        self.answers = @[@"Grapes",
-                         @"14",
-                         @"Monpelier"];
-    }
-    //返回新对象的地址
-    return  self;
 }
 
 - (void)viewDidLoad {
