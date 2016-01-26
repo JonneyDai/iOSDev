@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A04732E1C3E96B6000EB993 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A04732D1C3E96B6000EB993 /* ImageStore.m */; };
+		0A2F8D091C45F088008A8EE5 /* ItemCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F8D071C45F088008A8EE5 /* ItemCellTableViewCell.m */; };
+		0A2F8D0A1C45F088008A8EE5 /* ItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8D081C45F088008A8EE5 /* ItemCellTableViewCell.xib */; };
 		0AA810D81C3BDE7D00ADF328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA810D71C3BDE7D00ADF328 /* main.m */; };
 		0AA810DB1C3BDE7D00ADF328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA810DA1C3BDE7D00ADF328 /* AppDelegate.m */; };
-		0AA810DE1C3BDE7D00ADF328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA810DD1C3BDE7D00ADF328 /* ViewController.m */; };
 		0AA810E11C3BDE7D00ADF328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA810DF1C3BDE7D00ADF328 /* Main.storyboard */; };
 		0AA810E31C3BDE7D00ADF328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA810E21C3BDE7D00ADF328 /* Assets.xcassets */; };
 		0AA810E61C3BDE7D00ADF328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA810E41C3BDE7D00ADF328 /* LaunchScreen.storyboard */; };
@@ -25,12 +26,13 @@
 /* Begin PBXFileReference section */
 		0A04732C1C3E96B6000EB993 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
 		0A04732D1C3E96B6000EB993 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
+		0A2F8D061C45F088008A8EE5 /* ItemCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCellTableViewCell.h; sourceTree = "<group>"; };
+		0A2F8D071C45F088008A8EE5 /* ItemCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCellTableViewCell.m; sourceTree = "<group>"; };
+		0A2F8D081C45F088008A8EE5 /* ItemCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCellTableViewCell.xib; sourceTree = "<group>"; };
 		0AA810D31C3BDE7D00ADF328 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA810D71C3BDE7D00ADF328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AA810D91C3BDE7D00ADF328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AA810DA1C3BDE7D00ADF328 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0AA810DC1C3BDE7D00ADF328 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0AA810DD1C3BDE7D00ADF328 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0AA810E01C3BDE7D00ADF328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AA810E21C3BDE7D00ADF328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA810E51C3BDE7D00ADF328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,20 +81,21 @@
 			children = (
 				0AA810D91C3BDE7D00ADF328 /* AppDelegate.h */,
 				0AA810DA1C3BDE7D00ADF328 /* AppDelegate.m */,
-				0AD8E9A91C3D22A4007DD824 /* DetailViewController.h */,
-				0AD8E9AA1C3D22A4007DD824 /* DetailViewController.m */,
-				0AD8E9AB1C3D22A4007DD824 /* DetailViewController.xib */,
-				0A04732C1C3E96B6000EB993 /* ImageStore.h */,
-				0A04732D1C3E96B6000EB993 /* ImageStore.m */,
-				0AA810F61C3BE7C000ADF328 /* BNRItem.h */,
-				0AA810F71C3BE7C000ADF328 /* BNRItem.m */,
-				0AA810F91C3BE97800ADF328 /* ItemStore.h */,
-				0AA810FA1C3BE97800ADF328 /* ItemStore.m */,
 				0AA810ED1C3BE17600ADF328 /* ItemsTableViewController.h */,
 				0AA810EE1C3BE17600ADF328 /* ItemsTableViewController.m */,
 				0AD8E9A71C3CEC9A007DD824 /* HeaderView.xib */,
-				0AA810DC1C3BDE7D00ADF328 /* ViewController.h */,
-				0AA810DD1C3BDE7D00ADF328 /* ViewController.m */,
+				0AD8E9A91C3D22A4007DD824 /* DetailViewController.h */,
+				0AD8E9AA1C3D22A4007DD824 /* DetailViewController.m */,
+				0AD8E9AB1C3D22A4007DD824 /* DetailViewController.xib */,
+				0A2F8D061C45F088008A8EE5 /* ItemCellTableViewCell.h */,
+				0A2F8D071C45F088008A8EE5 /* ItemCellTableViewCell.m */,
+				0A2F8D081C45F088008A8EE5 /* ItemCellTableViewCell.xib */,
+				0AA810F61C3BE7C000ADF328 /* BNRItem.h */,
+				0AA810F71C3BE7C000ADF328 /* BNRItem.m */,
+				0A04732C1C3E96B6000EB993 /* ImageStore.h */,
+				0A04732D1C3E96B6000EB993 /* ImageStore.m */,
+				0AA810F91C3BE97800ADF328 /* ItemStore.h */,
+				0AA810FA1C3BE97800ADF328 /* ItemStore.m */,
 				0AA810DF1C3BDE7D00ADF328 /* Main.storyboard */,
 				0AA810E21C3BDE7D00ADF328 /* Assets.xcassets */,
 				0AA810E41C3BDE7D00ADF328 /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 				0AA810E31C3BDE7D00ADF328 /* Assets.xcassets in Resources */,
 				0AD8E9AD1C3D22A4007DD824 /* DetailViewController.xib in Resources */,
 				0AA810E11C3BDE7D00ADF328 /* Main.storyboard in Resources */,
+				0A2F8D0A1C45F088008A8EE5 /* ItemCellTableViewCell.xib in Resources */,
 				0AD8E9A81C3CEC9A007DD824 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA810DE1C3BDE7D00ADF328 /* ViewController.m in Sources */,
 				0AA810DB1C3BDE7D00ADF328 /* AppDelegate.m in Sources */,
+				0A2F8D091C45F088008A8EE5 /* ItemCellTableViewCell.m in Sources */,
 				0AA810FB1C3BE97800ADF328 /* ItemStore.m in Sources */,
 				0AA810F81C3BE7C000ADF328 /* BNRItem.m in Sources */,
 				0AA810EF1C3BE17600ADF328 /* ItemsTableViewController.m in Sources */,
@@ -299,11 +303,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonneydai.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -311,11 +318,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonneydai.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

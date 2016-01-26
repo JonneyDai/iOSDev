@@ -23,8 +23,10 @@
     
     ItemsTableViewController *itvc = [[ItemsTableViewController alloc]init];
     
+    //设置ItemsTableViewController为UINavigationController的rootViewController
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:itvc];
     
+    //设置UINavigationController为UIWindow对象的rootViewController
     self.window.rootViewController =  nc;
 
     self.window.backgroundColor = [UIColor whiteColor];

@@ -22,32 +22,17 @@
 @end
 
 @implementation DetailViewController
-- (IBAction)backgroundTapped:(id)sender {
-    
-    [self.view endEditing:YES];
-}
-#pragma mark - Action
-- (IBAction)takePicture:(id)sender {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    }else{
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+-(void) viewDidLayoutSubviews
+{
+    //检查view中是否存在有歧义布局的子视图
+    for (UIView *subview in self.view.subviews) {
+        if ([subview hasAmbiguousLayout]) {
+            NSLog(@"AMBIGOUS:%@",subview);
+        }
     }
-    NSArray *availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
-    imagePicker.mediaTypes = availableTypes;
-    imagePicker.delegate = self;
-    imagePicker.allowsEditing = YES;
-    
-    //以模态的形式显示UIImagePickerController对象
-    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
--(void)setItem:(BNRItem *)item
-{
-    _item = item;
-    self.navigationItem.title = _item.itemName;
-}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -59,7 +44,7 @@
     self.valueField.text = [NSString stringWithFormat:@"%d",mItem.valueInDollars];
     
     self.nameField.placeholder = @"Enter name";
-
+    
     //创建NSDateFormatter对象，用于将NSDate对象换成简单的日期字符串
     static NSDateFormatter *dateFormatter = nil;
     if (!dateFormatter) {
@@ -88,7 +73,6 @@
     mItem.valueInDollars = [self.valueField.text intValue];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -97,6 +81,43 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    //进一步确定缺少哪种约束，推测自动布局另一种布局方式
+    for (UIView *subview in self.view.subviews) {
+        if ([subview hasAmbiguousLayout]) {
+            [subview exerciseAmbiguityInLayout];
+        }
+    }
+    
+    [self.view endEditing:YES];
+}
+
+#pragma mark - Action
+- (IBAction)takePicture:(id)sender
+{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }else{
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    NSArray *availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    imagePicker.mediaTypes = availableTypes;
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    
+    //以模态的形式显示UIImagePickerController对象
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+-(void)setItem:(BNRItem *)item
+{
+    _item = item;
+    self.navigationItem.title = _item.itemName;
 }
 
 
@@ -135,8 +156,5 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
-
-
-
 
 @end

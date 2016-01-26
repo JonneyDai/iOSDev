@@ -20,6 +20,16 @@
 
 @implementation DrawView
 
+////静态分析器测试代码
+//-(int)numberOfLines
+//{
+//    int count = 0;
+//    if (self.linesInProgress && self.finishedLines) {
+//        count = [self.linesInProgress count] + [self.finishedLines count];
+//    }
+//    return count;
+//}
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -156,6 +166,13 @@
         [[UIColor greenColor]set];
         [self strokeLine:self.selectedLine];
     }
+    
+//    //性能测试中提高CPU占用量代码
+//    float f = 0.0;
+//    for (int i = 0; i < 1000000; i++) {
+//        f = f + sin(sin(sin(time(NULL) + i)));
+//    }
+//    NSLog(@"f = %f",f);
     
 }
 //

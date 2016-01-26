@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import "ItemStore.h"
 #import "DetailViewController.h"
+#import "ItemCellTableViewCell.h"
 
 @interface ItemsTableViewController ()
 
@@ -73,7 +74,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+    //创建UINib对象，该对象代表包含了ItemCellTableViewCell的NIB文件
+    UINib *nib = [UINib nibWithNibName:@"ItemCellTableViewCell" bundle:nil];
+    
+    //通过UINib对象注册相应的NIB文件
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"ItemCellTableViewCell"];
     
 //    UIView *header = self.headerView;
 //    [self.tableView setTableHeaderView:header];
@@ -113,11 +121,21 @@
 //    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
 //                                                  reuseIdentifier:@"UITableViewCell"];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
-                                                            forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+//                                                            forIndexPath:indexPath];
+    
+    //获取ItemCellTableViewCell对象，返回的可能是现有的对象，也可能是新建的对象
+    ItemCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCellTableViewCell"
+                                                                  forIndexPath:indexPath];
     NSArray *items = [[ItemStore sharedStore]allItems];
     BNRItem *item = items[indexPath.row];
-    cell.textLabel.text = [item description];
+    
+    //根据BNRItem对象设置ItemCellTableViewCell对象
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d",item.valueInDollars];
+    
+//    cell.textLabel.text = [item description];
     
     return cell;
 }
@@ -152,12 +170,13 @@
     [[ItemStore sharedStore]moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
-
+//更改TableViewCell中删除的Title
 //-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    return @"Remove";
 //}
 //
+//规定最后一行不可移动
 //-(BOOL) tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    NSArray *items = [[ItemStore sharedStore]allItems];

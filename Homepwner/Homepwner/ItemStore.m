@@ -17,7 +17,7 @@
 @end
 
 @implementation ItemStore
-
+#pragma -mark 单例模式
 +(instancetype)sharedStore
 {
     static ItemStore *sharedStore = nil;
@@ -49,6 +49,7 @@
     return self;
 }
 
+#pragma -mark 接口实现
 -(NSArray *)allItems
 {
     return self.privateItems;
