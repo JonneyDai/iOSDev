@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  webView
+//  testtesttest
 //
-//  Created by 代隽杰 on 15/11/30.
-//  Copyright © 2015年 gree. All rights reserved.
+//  Created by 代隽杰 on 16/1/29.
+//  Copyright © 2016年 gree. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -23,15 +23,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
--(IBAction)testLoadHTMLString:(id)sender{
-
-}
-
-
-
-
-
-
 
 @end

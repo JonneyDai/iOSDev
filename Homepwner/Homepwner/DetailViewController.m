@@ -15,9 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIToolbar   *toolbar;
 
 @end
 
@@ -38,12 +38,12 @@
 {
     [super viewWillAppear:animated];
     
-    BNRItem *mItem = self.item;
-    self.nameField.text = mItem.itemName;
+    BNRItem *mItem              = self.item;
+    self.nameField.text         = mItem.itemName;
     self.serialNumberField.text = mItem.serialNumber;
-    self.valueField.text = [NSString stringWithFormat:@"%d",mItem.valueInDollars];
-    
-    self.nameField.placeholder = @"Enter name";
+    self.valueField.text        = [NSString stringWithFormat:@"%d",mItem.valueInDollars];
+
+    self.nameField.placeholder  = @"Enter name";
     
     //创建NSDateFormatter对象，用于将NSDate对象换成简单的日期字符串
     static NSDateFormatter *dateFormatter = nil;
@@ -53,13 +53,13 @@
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
     }
     //将转换后得到的日期字符串设置为dateLabel的标题
-    self.dateLabel.text = [dateFormatter stringFromDate:mItem.dateCreated];
-    
-    NSString *itemKey = self.item.itemKey;
+    self.dateLabel.text     = [dateFormatter stringFromDate:mItem.dateCreated];
+
+    NSString *itemKey       = self.item.itemKey;
     //根据itemKey，从ImageStore对象获取照片
     UIImage *imageToDisplay = [[ImageStore sharedStore]imageForKey:itemKey];
     //将得到的照片赋给UIImageView对象
-    self.imageView.image = imageToDisplay;
+    self.imageView.image    = imageToDisplay;
     
 }
 
@@ -67,9 +67,9 @@
 {
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
-    BNRItem *mItem = self.item;
-    mItem.itemName = self.nameField.text;
-    mItem.serialNumber = self.serialNumberField.text;
+    BNRItem *mItem       = self.item;
+    mItem.itemName       = self.nameField.text;
+    mItem.serialNumber   = self.serialNumberField.text;
     mItem.valueInDollars = [self.valueField.text intValue];
 }
 
@@ -105,9 +105,9 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
-    NSArray *availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
-    imagePicker.mediaTypes = availableTypes;
-    imagePicker.delegate = self;
+    NSArray *availableTypes   = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    imagePicker.mediaTypes    = availableTypes;
+    imagePicker.delegate      = self;
     imagePicker.allowsEditing = YES;
     
     //以模态的形式显示UIImagePickerController对象

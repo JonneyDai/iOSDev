@@ -359,11 +359,11 @@ import UIKit
 //
 //welcome
 
-//集合类型
+//数组类型
 //var shoppingList: [String] = ["Eggs","Milk"]
-//
+////
 //var shoppingList2 = ["dd","cc",1,223,"c","1",2.5]
-//
+////
 //print("The shopping list contains \(shoppingList.count) items.")
 //if shoppingList.isEmpty {
 //    print("The shoppong list is empty.")
@@ -376,17 +376,79 @@ import UIKit
 //shoppingList2.append("hh")
 //
 //shoppingList2 += ["aaaaa"]
+//
+//var firstItem = shoppingList[0]
+//
+//shoppingList[0] = "SixEggs"
+//
+//shoppingList
+//
+//shoppingList[0...1] = ["dd"]
+//shoppingList
+//
+//shoppingList.insert("Maple", atIndex: 0)
+//shoppingList.removeAtIndex(0)
+//shoppingList
+//
+//for item in shoppingList{
+//    print(item)
+//}
+//
+//for (index, value) in shoppingList.enumerate(){
+//    print("Item\(String(index + 1)): \(value)")
+//}
+//
+//
+//var someInts = [Int]()
+//print("someInts is of type [Int] with \(someInts.count) items.")
+//someInts.append(3)
+//someInts = []
+//
+//var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+//
+//var anotherThreeDoubles = Array(count: 3, repeatedValue: 2.5)
+//
+//var sixDoubles = threeDoubles + anotherThreeDoubles
+//
 
-var someInts = [Int]()
-print("someInts is of type [Int] with \(someInts.count) items.")
-someInts.append(3)
-someInts = []
+//集合类型
+//var letters = Set<Character>()
+//
+//print("letters is of type Set<Character> with \(letters.count) items.")
+//
+//letters.insert("a")
+//letters = []
+//
+//var favoriteGenres: Set<String> = ["Rock" ,"Classical", "Hip hop"]
+//
+//var favoriteGenres2: Set = ["aa", "bb", "cc"]
+//print("I have \(favoriteGenres.count) favorite music genres."
+//)
+//
+//favoriteGenres.insert("dd")
+//
+//favoriteGenres.remove("Rock")
+//
+//favoriteGenres.contains("Funk")
+//
+//for genre in favoriteGenres{
+//    print("\(genre)\n")
+//}
+//
+//for genre in favoriteGenres.sort(){
+//    print("\(genre)")
+//}
+//
+//let oddDigits: Set = [1,3,5,7,9]
+//let evenDigits: Set = [0, 2, 4, 6, 8]
+//let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+//oddDigits.union(evenDigits).sort()
+//oddDigits.intersect(evenDigits).sort()
+//oddDigits.subtract(singleDigitPrimeNumbers).sort()
+//oddDigits.exclusiveOr(singleDigitPrimeNumbers).sort()
+//
 
-var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
 
-var anotherThreeDoubles = Array(count: 3, repeatedValue: 2.5)
-
-var sixDoubles = threeDoubles + anotherThreeDoubles
 
 
 
