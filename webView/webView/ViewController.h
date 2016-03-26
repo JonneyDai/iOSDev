@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic,weak) IBOutlet UIWebView * webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 -(IBAction)testLoadHTMLString:(id)sender;
 

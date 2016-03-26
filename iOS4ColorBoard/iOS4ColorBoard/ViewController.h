@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorDescription.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) BOOL existongColor;
+
+@property (nonatomic) ColorDescription *colorDescription;
 
 @end
 

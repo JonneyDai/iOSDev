@@ -15,8 +15,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="405" height="71"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-SS-gKA">
-                        <rect key="frame" x="41" y="16" width="274" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-SS-gKA">
+                        <rect key="frame" x="41" y="16" width="306" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="3XN-LS-8l5"/>
                         </constraints>
@@ -24,8 +24,8 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23Q-gB-YG8">
-                        <rect key="frame" x="41" y="34" width="274" height="22"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23Q-gB-YG8">
+                        <rect key="frame" x="41" y="34" width="306" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="ch3-gz-fK4"/>
                         </constraints>
@@ -40,15 +40,15 @@
                             <constraint firstAttribute="height" constant="40" id="mzB-oy-zAn"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJx-il-goc">
-                        <rect key="frame" x="323" y="16" width="74" height="40"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJx-il-goc">
+                        <rect key="frame" x="355" y="26" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OJx-il-goc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Sh-XF-HGJ"/>
+                    <constraint firstItem="OJx-il-goc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="1" id="0Sh-XF-HGJ"/>
                     <constraint firstItem="23Q-gB-YG8" firstAttribute="leading" secondItem="tbX-pM-8GJ" secondAttribute="trailing" constant="1" id="4UM-y3-mBz"/>
                     <constraint firstItem="23Q-gB-YG8" firstAttribute="bottom" secondItem="tbX-pM-8GJ" secondAttribute="bottom" id="9tN-Ic-gJb"/>
                     <constraint firstItem="tbX-pM-8GJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FcF-nO-wig"/>

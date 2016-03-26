@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-yC-r5f">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-yC-r5f">
                     <rect key="frame" x="70" y="25" width="68" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Edit"/>
@@ -23,8 +23,11 @@
                         <action selector="toggleEditintMode:" destination="-1" eventType="touchUpInside" id="kjh-N2-xQD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYg-hv-enc">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYg-hv-enc">
                     <rect key="frame" x="480" y="25" width="53" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="NWK-Ch-hjq"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="New"/>
                     <connections>
@@ -38,7 +41,9 @@
                 <constraint firstItem="Cuk-yC-r5f" firstAttribute="height" secondItem="aYg-hv-enc" secondAttribute="height" id="Bck-VW-hs4"/>
                 <constraint firstAttribute="trailing" secondItem="aYg-hv-enc" secondAttribute="trailing" constant="67" id="EZF-Mh-zvG"/>
                 <constraint firstItem="Cuk-yC-r5f" firstAttribute="centerY" secondItem="aYg-hv-enc" secondAttribute="centerY" id="PaP-g3-xf7"/>
-                <constraint firstItem="Cuk-yC-r5f" firstAttribute="width" secondItem="aYg-hv-enc" secondAttribute="width" id="brn-yP-kBt"/>
+                <constraint firstItem="Cuk-yC-r5f" firstAttribute="centerY" secondItem="3he-WK-dtp" secondAttribute="centerY" id="Pyb-DJ-TYO"/>
+                <constraint firstItem="Cuk-yC-r5f" firstAttribute="top" secondItem="3he-WK-dtp" secondAttribute="top" constant="25" id="abM-Uf-FcG"/>
+                <constraint firstItem="Cuk-yC-r5f" firstAttribute="width" secondItem="aYg-hv-enc" secondAttribute="width" constant="15" id="brn-yP-kBt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="831" y="138"/>

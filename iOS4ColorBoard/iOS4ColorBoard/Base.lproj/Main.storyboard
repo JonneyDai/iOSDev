@@ -9,20 +9,20 @@
         <!--Color-->
         <scene sceneID="boE-wF-iMj">
             <objects>
-                <tableViewController id="HXG-sF-1b3" sceneMemberID="viewController">
+                <tableViewController id="HXG-sF-1b3" customClass="PaletteTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xTX-p7-VPU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="lgV-Oe-RVe" style="IBUITableViewCellStyleDefault" id="fOr-7i-UXN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="U87-pT-Dwl" style="IBUITableViewCellStyleDefault" id="qYD-6C-oxX">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOr-7i-UXN" id="byB-1f-RMz">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYD-6C-oxX" id="4zN-SJ-WJZ">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lgV-Oe-RVe">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U87-pT-Dwl">
                                             <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -31,6 +31,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1Bu-s3-x4a" kind="push" identifier="ExistingColor" id="cfa-iI-XPw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -42,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Color" id="uJC-CZ-3h5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zNi-Db-p1T">
                             <connections>
-                                <segue destination="Hsi-YP-I2W" kind="modal" id="5q6-LA-nRW"/>
+                                <segue destination="Hsi-YP-I2W" kind="modal" identifier="NewColor" id="5q6-LA-nRW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -51,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-19" y="1106"/>
         </scene>
-        <!--blue-->
+        <!--ColorViewControler-->
         <scene sceneID="RMl-aZ-vQb">
             <objects>
-                <viewController id="1Bu-s3-x4a" userLabel="blue" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="1Bu-s3-x4a" userLabel="ColorViewControler" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpz-QK-YO9"/>
                         <viewControllerLayoutGuide type="bottom" id="qmM-5g-HPa"/>
@@ -181,4 +184,7 @@
             <point key="canvasLocation" x="-782" y="1106"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iUJ-FA-jhu"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -110,7 +110,6 @@
 				TargetAttributes = {
 					0AB5A7D01C0C1ABC009B79BE = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = WCM3XS4G7J;
 					};
 				};
 			};
@@ -309,6 +308,7 @@
 				0AB5A7EA1C0C1ABC009B79BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
