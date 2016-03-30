@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A9554681CA915A9005D9B2E /* GENetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A9554671CA915A9005D9B2E /* GENetworking.h */; };
+		0A95546F1CA915E1005D9B2E /* GENetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95546A1CA915E1005D9B2E /* GENetworking.m */; };
+		0A9554701CA915E1005D9B2E /* GETCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95546C1CA915E1005D9B2E /* GETCPSocket.m */; };
+		0A9554711CA915E1005D9B2E /* GEUDPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95546E1CA915E1005D9B2E /* GEUDPSocket.m */; };
+		0A9554841CA91647005D9B2E /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9554811CA91647005D9B2E /* AsyncSocket.m */; };
+		0A9554851CA91647005D9B2E /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9554831CA91647005D9B2E /* AsyncUdpSocket.m */; };
+		0A95548E1CA91AB3005D9B2E /* GETCPSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A95548D1CA91AB3005D9B2E /* GETCPSocket.h */; };
+		0A9554901CA91ABB005D9B2E /* GEUDPSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A95548F1CA91ABB005D9B2E /* GEUDPSocket.h */; };
+		0A9554921CA91B12005D9B2E /* GESocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A9554911CA91B12005D9B2E /* GESocket.h */; };
+		0A9554941CA91B48005D9B2E /* RTSocketDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A9554931CA91B48005D9B2E /* RTSocketDAO.h */; };
+		0A95549D1CA91BB7005D9B2E /* AsyncSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A95549B1CA91BB7005D9B2E /* AsyncSocket.h */; };
+		0A95549E1CA91BB7005D9B2E /* AsyncUdpSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A95549C1CA91BB7005D9B2E /* AsyncUdpSocket.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A9554591CA9152F005D9B2E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0A9554921CA91B12005D9B2E /* GESocket.h in CopyFiles */,
+				0A9554901CA91ABB005D9B2E /* GEUDPSocket.h in CopyFiles */,
+				0A9554681CA915A9005D9B2E /* GENetworking.h in CopyFiles */,
+				0A95548E1CA91AB3005D9B2E /* GETCPSocket.h in CopyFiles */,
+				0A9554941CA91B48005D9B2E /* RTSocketDAO.h in CopyFiles */,
+				0A95549D1CA91BB7005D9B2E /* AsyncSocket.h in CopyFiles */,
+				0A95549E1CA91BB7005D9B2E /* AsyncUdpSocket.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A95545B1CA9152F005D9B2E /* libGENetworkManagement.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGENetworkManagement.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A9554671CA915A9005D9B2E /* GENetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GENetworking.h; sourceTree = "<group>"; };
+		0A95546A1CA915E1005D9B2E /* GENetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GENetworking.m; sourceTree = "<group>"; };
+		0A95546C1CA915E1005D9B2E /* GETCPSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETCPSocket.m; sourceTree = "<group>"; };
+		0A95546E1CA915E1005D9B2E /* GEUDPSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEUDPSocket.m; sourceTree = "<group>"; };
+		0A9554811CA91647005D9B2E /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		0A9554831CA91647005D9B2E /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		0A95548D1CA91AB3005D9B2E /* GETCPSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GETCPSocket.h; path = GENetworkManagement/GETCPSocket.h; sourceTree = "<group>"; };
+		0A95548F1CA91ABB005D9B2E /* GEUDPSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GEUDPSocket.h; path = GENetworkManagement/GEUDPSocket.h; sourceTree = "<group>"; };
+		0A9554911CA91B12005D9B2E /* GESocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GESocket.h; path = GENetworkManagement/GESocket.h; sourceTree = "<group>"; };
+		0A9554931CA91B48005D9B2E /* RTSocketDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RTSocketDAO.h; path = GENetworkManagement/RTSocketDAO.h; sourceTree = "<group>"; };
+		0A95549B1CA91BB7005D9B2E /* AsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = GENetworkManagement/AsyncSocket.h; sourceTree = "<group>"; };
+		0A95549C1CA91BB7005D9B2E /* AsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = GENetworkManagement/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		0A9554C41CA922E1005D9B2E /* RTTCPDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTTCPDAO.h; sourceTree = "<group>"; };
+		0A9554C51CA922E1005D9B2E /* RTUDPDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTUDPDAO.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A9554581CA9152F005D9B2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A9554521CA9152F005D9B2E = {
+			isa = PBXGroup;
+			children = (
+				0A95549B1CA91BB7005D9B2E /* AsyncSocket.h */,
+				0A95549C1CA91BB7005D9B2E /* AsyncUdpSocket.h */,
+				0A9554931CA91B48005D9B2E /* RTSocketDAO.h */,
+				0A9554911CA91B12005D9B2E /* GESocket.h */,
+				0A95548F1CA91ABB005D9B2E /* GEUDPSocket.h */,
+				0A95548D1CA91AB3005D9B2E /* GETCPSocket.h */,
+				0A9554C41CA922E1005D9B2E /* RTTCPDAO.h */,
+				0A9554C51CA922E1005D9B2E /* RTUDPDAO.h */,
+				0A9554671CA915A9005D9B2E /* GENetworking.h */,
+				0A95545D1CA9152F005D9B2E /* GENetworkManagement */,
+				0A95545C1CA9152F005D9B2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A95545C1CA9152F005D9B2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A95545B1CA9152F005D9B2E /* libGENetworkManagement.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A95545D1CA9152F005D9B2E /* GENetworkManagement */ = {
+			isa = PBXGroup;
+			children = (
+				0A95546A1CA915E1005D9B2E /* GENetworking.m */,
+				0A95546C1CA915E1005D9B2E /* GETCPSocket.m */,
+				0A95546E1CA915E1005D9B2E /* GEUDPSocket.m */,
+				0A9554811CA91647005D9B2E /* AsyncSocket.m */,
+				0A9554831CA91647005D9B2E /* AsyncUdpSocket.m */,
+			);
+			path = GENetworkManagement;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A95545A1CA9152F005D9B2E /* GENetworkManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A9554641CA9152F005D9B2E /* Build configuration list for PBXNativeTarget "GENetworkManagement" */;
+			buildPhases = (
+				0A9554571CA9152F005D9B2E /* Sources */,
+				0A9554581CA9152F005D9B2E /* Frameworks */,
+				0A9554591CA9152F005D9B2E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GENetworkManagement;
+			productName = GENetworkManagement;
+			productReference = 0A95545B1CA9152F005D9B2E /* libGENetworkManagement.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A9554531CA9152F005D9B2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = gree;
+				TargetAttributes = {
+					0A95545A1CA9152F005D9B2E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 0A9554561CA9152F005D9B2E /* Build configuration list for PBXProject "GENetworkManagement" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A9554521CA9152F005D9B2E;
+			productRefGroup = 0A95545C1CA9152F005D9B2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A95545A1CA9152F005D9B2E /* GENetworkManagement */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A9554571CA9152F005D9B2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9554701CA915E1005D9B2E /* GETCPSocket.m in Sources */,
+				0A9554711CA915E1005D9B2E /* GEUDPSocket.m in Sources */,
+				0A9554841CA91647005D9B2E /* AsyncSocket.m in Sources */,
+				0A95546F1CA915E1005D9B2E /* GENetworking.m in Sources */,
+				0A9554851CA91647005D9B2E /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A9554621CA9152F005D9B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A9554631CA9152F005D9B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A9554651CA9152F005D9B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0A9554661CA9152F005D9B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A9554561CA9152F005D9B2E /* Build configuration list for PBXProject "GENetworkManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9554621CA9152F005D9B2E /* Debug */,
+				0A9554631CA9152F005D9B2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A9554641CA9152F005D9B2E /* Build configuration list for PBXNativeTarget "GENetworkManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9554651CA9152F005D9B2E /* Debug */,
+				0A9554661CA9152F005D9B2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A9554531CA9152F005D9B2E /* Project object */;
+}
