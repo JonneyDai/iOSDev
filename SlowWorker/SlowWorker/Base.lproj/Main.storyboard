@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-cb-3X4">
+                                <rect key="frame" x="260" y="118" width="80" height="30"/>
+                                <state key="normal" title="StartButton"/>
+                                <connections>
+                                    <action selector="doWork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oS3-zU-mCm"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-W4-D7W">
+                                <rect key="frame" x="180" y="156" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7q9-X9-8Hm"/>
+                                    <constraint firstAttribute="width" secondItem="8Lh-W4-D7W" secondAttribute="height" multiplier="15:8" id="8Rt-gx-0lK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XrQ-Ln-c4G">
+                                <rect key="frame" x="348" y="123" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XrQ-Ln-c4G" firstAttribute="centerY" secondItem="4dl-cb-3X4" secondAttribute="centerY" id="RHX-lD-8uv"/>
+                            <constraint firstItem="8Lh-W4-D7W" firstAttribute="top" secondItem="4dl-cb-3X4" secondAttribute="bottom" constant="8" id="SZT-fp-WmU"/>
+                            <constraint firstItem="8Lh-W4-D7W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJC-5O-vVz"/>
+                            <constraint firstItem="XrQ-Ln-c4G" firstAttribute="leading" secondItem="4dl-cb-3X4" secondAttribute="trailing" constant="8" id="bRu-hh-1f0"/>
+                            <constraint firstItem="4dl-cb-3X4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fZB-ZT-t1G"/>
+                            <constraint firstItem="8Lh-W4-D7W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lSX-2R-SR0"/>
+                            <constraint firstItem="4dl-cb-3X4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="sdq-RH-zgC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsTextView" destination="8Lh-W4-D7W" id="SXG-CI-xCg"/>
+                        <outlet property="spinner" destination="XrQ-Ln-c4G" id="Jm8-AB-e4g"/>
+                        <outlet property="startButton" destination="4dl-cb-3X4" id="ZbK-pf-tF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

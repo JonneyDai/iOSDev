@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/Jonney/Library/Developer/Shared/Documentation/DocSets/com.ibireme.myproject.MyProject.docset
+Time: 2016-04-13 07:05:56 +0000

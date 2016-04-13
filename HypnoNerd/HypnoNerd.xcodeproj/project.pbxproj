@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0A0EB3D31CBE27D20093243A /* appledoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0A0EB3D61CBE27D20093243A /* Build configuration list for PBXAggregateTarget "appledoc" */;
+			buildPhases = (
+				0A0EB3D71CBE27DD0093243A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = appledoc;
+			productName = appledoc;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0AA810C81C3B920B00ADF328 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA810C61C3B920B00ADF328 /* QuizViewController.m */; };
 		0AA810C91C3B920B00ADF328 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA810C71C3B920B00ADF328 /* QuizViewController.xib */; };
@@ -129,6 +143,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = gree;
 				TargetAttributes = {
+					0A0EB3D31CBE27D20093243A = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					0AF79F821C3A987B00C71BBB = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -148,6 +165,7 @@
 			projectRoot = "";
 			targets = (
 				0AF79F821C3A987B00C71BBB /* HypnoNerd */,
+				0A0EB3D31CBE27D20093243A /* appledoc */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +184,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A0EB3D71CBE27DD0093243A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"ACME\";\ncompanyID=\"com.ACME\";\ncompanyURL=\"http://ACME.com\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"~/help\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AF79F7F1C3A987B00C71BBB /* Sources */ = {
@@ -203,6 +237,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A0EB3D41CBE27D20093243A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A0EB3D51CBE27D20093243A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		0AF79F981C3A987B00C71BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -310,6 +358,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A0EB3D61CBE27D20093243A /* Build configuration list for PBXAggregateTarget "appledoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A0EB3D41CBE27D20093243A /* Debug */,
+				0A0EB3D51CBE27D20093243A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0AF79F7E1C3A987B00C71BBB /* Build configuration list for PBXProject "HypnoNerd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

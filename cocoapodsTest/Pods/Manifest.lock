@@ -27,13 +27,16 @@ PODS:
     - CocoaAsyncSocket/RunLoop
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
+  - WebViewJavascriptBridge (5.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CocoaAsyncSocket
+  - WebViewJavascriptBridge (~> 5.0)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
 
 COCOAPODS: 0.39.0
