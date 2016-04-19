@@ -140,13 +140,17 @@ static int pn=0;
                             Success:^(id responseObject){
                                 int error_code = [[responseObject objectForKey:@"error_code"] intValue];
                                 if (!error_code) {
-                                    //  NSLog(@" %@", responseObject);
+//                                      NSLog(@"09090909090%@", responseObject);
     
                                     if (pn==0) {
                                         _dataSource=[InfoModel objectArrayWithKeyValuesArray:[[responseObject objectForKey:@"result"] objectForKey:@"data"]];
+//                                        NSLog(@"121212121%@",_dataSource);
+                                        
+//                                        NSLog(@"343434343%@",[InfoModel objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"]]);
 
                                     }else{
                                         NSArray* arry=[InfoModel objectArrayWithKeyValuesArray:[[responseObject objectForKey:@"result"] objectForKey:@"data"]];
+//                                        NSLog(@"121212121%@",_dataSource);
 
                                         [_dataSource addObjectsFromArray:arry];
                                     }
@@ -258,7 +262,6 @@ static int pn=0;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     InfoCollectionViewCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
     // Configure the cell
     InfoModel *model=(InfoModel*)[_dataSource objectAtIndex:indexPath.row];
     [cell.img sd_setImageWithURL:[NSURL URLWithString:[model.albums objectAtIndex:0]] placeholderImage:_defaultImage];

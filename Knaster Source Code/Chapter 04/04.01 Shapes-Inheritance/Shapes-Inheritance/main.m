@@ -174,6 +174,18 @@ NSString *colorName (ShapeColor color)
 
 @end // OblateSphereoid
 
+// --------------------------------------------------
+// All about RoundedRectangle
+@interface RoundedRectangle : Shape
+{
+    @private
+    int radius;
+}
+
+@end
+
+
+
 
 
 // --------------------------------------------------

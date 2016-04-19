@@ -16,7 +16,7 @@ MJCodingImplementation
     return @{
              @"steps":@"StepModel"
              };
-}
+    }
 
 -(BOOL)isEqual:(id)object{
     if (object==self) {

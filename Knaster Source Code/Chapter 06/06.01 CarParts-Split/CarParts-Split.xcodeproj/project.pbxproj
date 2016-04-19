@@ -89,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				8483F04115490A430066DE72 /* main.m */,
-				8483F04C15490A630066DE72 /* AllWeatherRadial.h */,
-				8483F04D15490A630066DE72 /* AllWeatherRadial.m */,
 				8483F04E15490A630066DE72 /* Car.h */,
 				8483F04F15490A630066DE72 /* Car.m */,
 				8483F05015490A630066DE72 /* Engine.h */,
@@ -99,6 +97,8 @@
 				8483F05315490A630066DE72 /* Slant6.m */,
 				8483F05415490A630066DE72 /* Tire.h */,
 				8483F05515490A630066DE72 /* Tire.m */,
+				8483F04C15490A630066DE72 /* AllWeatherRadial.h */,
+				8483F04D15490A630066DE72 /* AllWeatherRadial.m */,
 				8483F04515490A430066DE72 /* CarParts_Split.1 */,
 				8483F04315490A430066DE72 /* Supporting Files */,
 			);
@@ -139,7 +139,9 @@
 		8483F03115490A430066DE72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Gree;
 			};
 			buildConfigurationList = 8483F03415490A430066DE72 /* Build configuration list for PBXProject "CarParts-Split" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -257,6 +259,7 @@
 				8483F04B15490A430066DE72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

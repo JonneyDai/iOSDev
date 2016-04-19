@@ -20,7 +20,7 @@
 {
     if (self = [super init]) {
         engine = [Engine new];
-
+        
         tires[0] = [Tire new];
         tires[1] = [Tire new];
         tires[2] = [Tire new];
@@ -52,9 +52,9 @@
                index);
         exit (1);
     }
-
+    
     tires[index] = tire;
-
+    
 } // setTire:atIndex:
 
 
@@ -65,9 +65,9 @@
                index);
         exit (1);
     }
-
+    
     return (tires[index]);
-
+    
 } // tireAtIndex:
 
 

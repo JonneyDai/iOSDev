@@ -40,6 +40,9 @@ NSUInteger leftIndex=0;//左侧选中索引
     _tableView.delegate=self;
     _tableView.dataSource=self;
     [_tableView setTag:101];
+    
+    _tableView.backgroundColor = [UIColor redColor];
+    
     _tableView.separatorStyle=UITableViewCellStyleDefault;//UITableViewCellSeparatorStyleNone;
     
     [self.view addSubview:_tableView];
@@ -70,38 +73,40 @@ NSUInteger leftIndex=0;//左侧选中索引
    }
 /** 获取分类数据*/
 -(void)getTagData{
-    NSString * path=[[NSBundle mainBundle] pathForResource:@"TagList" ofType:@"plist"];
-    NSArray * tags=[[NSArray alloc]initWithContentsOfFile:path];
-    _dataSource=[TagModel objectArrayWithKeyValuesArray:tags];
-    [_tableView reloadData];
+    
+//    NSString * path=[[NSBundle mainBundle] pathForResource:@"TagList" ofType:@"plist"];
+//    NSArray * tags=[[NSArray alloc]initWithContentsOfFile:path];
+//    _dataSource=[TagModel objectArrayWithKeyValuesArray:tags];
+//    [_tableView reloadData];
     //设置默认选中第一行
-    NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
-    [_tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
-    [self tableView:_tableView didSelectRowAtIndexPath:ip];
+//    NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
+//    [_tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
+//    [self tableView:_tableView didSelectRowAtIndexPath:ip];
+    
     //暂时先用本地数据来替代,API目录更新一般没有那么快
-//    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
-//    [juheapi executeWorkWithAPI:API_category
-//                          APIID:APPID
-//                     Parameters:nil
-//                         Method:Method_Get
-//                        Success:^(id responseObject){
-//                            int error_code = [[responseObject objectForKey:@"error_code"] intValue];
-//                            if (!error_code) {
-//                              //  NSLog(@" %@", responseObject);
-//                                _dataSource=[TagModel objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"]];
-//                                [_tableView reloadData];
-//                                //设置默认选中第一行
-//                                NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
-//                                [_tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
-//                                [self tableView:_tableView didSelectRowAtIndexPath:ip];
-//                                
-//                            }else{
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:API_category
+                          APIID:APPID
+                     Parameters:nil
+                         Method:Method_Get
+                        Success:^(id responseObject){
+                            int error_code = [[responseObject objectForKey:@"error_code"] intValue];
+                            if (!error_code) {
 //                                NSLog(@" %@", responseObject);
-//                            }
-//                            
-//                        } Failure:^(NSError *error) {
-//                            NSLog(@"error:   %@",error.description);
-//                        }];
+                                _dataSource=[TagModel objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"]];
+                                [_tableView reloadData];
+                                //设置默认选中第一行
+                                NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
+                                [_tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
+                                [self tableView:_tableView didSelectRowAtIndexPath:ip];
+                                
+                            }else{
+                                NSLog(@" %@", responseObject);
+                            }
+                            
+                        } Failure:^(NSError *error) {
+                            NSLog(@"error:   %@",error.description);
+                        }];
 }
 
 #pragma mark -UITableView
@@ -138,8 +143,6 @@ NSUInteger leftIndex=0;//左侧选中索引
         return ((TagModel*)[_dataSource objectAtIndex:leftIndex]).list.count;
     }
 }
-
-
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView.tag==101) {
