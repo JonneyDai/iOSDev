@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 extern NSString *OpenID;
 extern NSString *APPID;
 extern NSString *Method_Get;

@@ -113,7 +113,6 @@ int pn=0;
     InfoCollectionViewController *vc=[[InfoCollectionViewController alloc]initWithSearchText:searchBar.text];
     [vc setTitle:searchBar.text];
     [self.navigationController pushViewController:vc animated:YES];
-    
    
 }
 

@@ -20,6 +20,8 @@
 		0A0A9CE31CC63532009CF749 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A9CE21CC63532009CF749 /* libc++.tbd */; };
 		0A0A9CE51CC63541009CF749 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A9CE41CC63541009CF749 /* libz.tbd */; };
 		0A0A9CE71CC6358C009CF749 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A9CE61CC6358C009CF749 /* AdSupport.framework */; };
+		0A3932791CC728680067BABC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A9CE01CC63500009CF749 /* CoreLocation.framework */; };
+		0A39327B1CC728B80067BABC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A39327A1CC728B80067BABC /* Reveal.framework */; };
 		632C95E8F9F242D924959AE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D7E945E9C2CD67597DFAC0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 		0A0A9CE21CC63532009CF749 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0A0A9CE41CC63541009CF749 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0A0A9CE61CC6358C009CF749 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0A39327A1CC728B80067BABC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		6883B541A37F01456AC80AE5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		768E0ECCB7011CBA38051F8B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		90D7E945E9C2CD67597DFAC0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3932791CC728680067BABC /* CoreLocation.framework in Frameworks */,
 				0A0A9CE71CC6358C009CF749 /* AdSupport.framework in Frameworks */,
 				0A0A9CE51CC63541009CF749 /* libz.tbd in Frameworks */,
+				0A39327B1CC728B80067BABC /* Reveal.framework in Frameworks */,
 				0A0A9CE31CC63532009CF749 /* libc++.tbd in Frameworks */,
 				0A0A9CDF1CC634BA009CF749 /* CoreTelephony.framework in Frameworks */,
 				632C95E8F9F242D924959AE4 /* libPods.a in Frameworks */,
@@ -101,6 +106,7 @@
 				0A0A9CBD1CC613BD009CF749 /* Assets.xcassets */,
 				0A0A9CBF1CC613BD009CF749 /* LaunchScreen.storyboard */,
 				0A0A9CC21CC613BD009CF749 /* Info.plist */,
+				0A39327A1CC728B80067BABC /* Reveal.framework */,
 				0A0A9CB11CC613BD009CF749 /* Supporting Files */,
 			);
 			path = FoodTest;
@@ -384,6 +390,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodTest",
+				);
 				INFOPLIST_FILE = FoodTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -403,6 +413,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodTest",
+				);
 				INFOPLIST_FILE = FoodTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

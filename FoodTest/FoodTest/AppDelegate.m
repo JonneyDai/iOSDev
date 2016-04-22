@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "JHOpenidSupplier.h"
+#import "ConstFile.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //config JHSDK
+    [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:OpenID];
+    
     return YES;
 }
 
