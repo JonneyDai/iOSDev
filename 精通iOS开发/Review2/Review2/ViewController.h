@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  Review1
+//  Review2
 //
-//  Created by 代隽杰 on 16/4/22.
+//  Created by 代隽杰 on 16/4/23.
 //  Copyright © 2016年 gree. All rights reserved.
 //
 
@@ -10,11 +10,7 @@
 
 @interface ViewController : UIViewController
 
-
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-
-- (IBAction)buttonPressed:(UIButton *)sender;
-
+-(IBAction)textFieldDoneEditing:(id)sender;
 
 @end
 

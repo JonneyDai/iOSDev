@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +18,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT1-BM-NEQ">
+                                <rect key="frame" x="504" y="296" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwd-Qw-3AF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlA-2H-d1V">
+                                <rect key="frame" x="60" y="91" width="480" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qlA-2H-d1V" secondAttribute="height" multiplier="383:21" constant="-194.80952380952374" id="YaD-iN-7oJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cc-dV-GRy">
+                                <rect key="frame" x="60" y="303" width="30" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tko-db-uP7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qlA-2H-d1V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="4Qb-Sm-jnV"/>
+                            <constraint firstItem="qlA-2H-d1V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IEa-zg-qkO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qlA-2H-d1V" secondAttribute="trailing" constant="40" id="K65-xD-6YV"/>
+                            <constraint firstItem="qlA-2H-d1V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="NS2-R1-QGi"/>
+                            <constraint firstItem="vT1-BM-NEQ" firstAttribute="trailing" secondItem="qlA-2H-d1V" secondAttribute="trailing" id="QEZ-9y-SxF"/>
+                            <constraint firstItem="vT1-BM-NEQ" firstAttribute="top" secondItem="qlA-2H-d1V" secondAttribute="bottom" constant="168" id="QIj-UV-5u7"/>
+                            <constraint firstItem="qlA-2H-d1V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQ0-JX-Vsp"/>
+                            <constraint firstItem="9cc-dV-GRy" firstAttribute="leading" secondItem="qlA-2H-d1V" secondAttribute="leading" id="YuU-xd-6Lj"/>
+                            <constraint firstItem="9cc-dV-GRy" firstAttribute="top" secondItem="qlA-2H-d1V" secondAttribute="bottom" constant="175" id="lbe-Jc-Tq7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TQ0-JX-Vsp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="qlA-2H-d1V" id="nwd-9t-bDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

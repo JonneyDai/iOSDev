@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <systemconfiguration/captivenetwork.h>
+#import <corefoundation/corefoundation.h>
 
 @interface ViewController ()
 
@@ -16,12 +18,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self getCurrentWifiName];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+//获取WiFi的SSID
+- (NSString *)getCurrentWifiName{
+    NSString *wifiName = @"Not Found";
+    CFArrayRef myArray = CNCopySupportedInterfaces();
+    if (myArray != nil) {
+        CFDictionaryRef myDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(myArray, 0));
+        if (myDict != nil) {
+            NSDictionary *dict = (NSDictionary*)CFBridgingRelease(myDict);
+            wifiName = [dict valueForKey:@"SSID"];
+        }
+    }
+    NSLog(@"wifiName:%@", wifiName);
+    return wifiName;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    //获取被点击按钮的标题
+    NSString *title = [sender titleForState:UIControlStateNormal];
+    NSString *plainText = [NSString stringWithFormat:@"%@ button pressed.",title];
+//    _statusLabel.text = plainText;
+    NSMutableAttributedString *styledText = [[NSMutableAttributedString alloc]initWithString:plainText];
+    NSDictionary *attributes = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:_statusLabel.font.pointSize]};
+    NSRange nameRange = [plainText rangeOfString:title];
+    [styledText setAttributes:attributes range:nameRange];
+    _statusLabel.attributedText = styledText;
+    
 }
 
 @end
