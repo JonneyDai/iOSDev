@@ -49,7 +49,7 @@
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="RRh-lC-UHC"/>
                                 </connections>
                             </textField>
-                            <slider clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Ti-o5-dHw">
+                            <slider clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Ti-o5-dHw">
                                 <rect key="frame" x="134" y="353" width="408" height="31"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MAp-U5-cRI"/>
@@ -61,9 +61,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-Jc-ssF">
+                                <rect key="frame" x="60" y="402" width="480" height="29"/>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="fql-xG-pBI"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Bf-5b-SBh">
+                                <rect key="frame" x="60" y="452" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="7DX-Zo-rhX"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-r4-vLx">
+                                <rect key="frame" x="491" y="452" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="TeR-RH-ycA"/>
+                                </connections>
+                            </switch>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-gv-Wb8">
+                                <rect key="frame" x="60" y="453" width="480" height="38"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcW-OH-lod"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.76470588235294112" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Qch-Jc-ssF" firstAttribute="trailing" secondItem="6Ti-o5-dHw" secondAttribute="trailing" id="0zW-o3-QL7"/>
                             <constraint firstItem="Smg-du-m5L" firstAttribute="trailing" secondItem="Wjb-Yk-jlu" secondAttribute="trailing" id="1sR-0q-4er"/>
                             <constraint firstItem="Ukf-4V-f1R" firstAttribute="leading" secondItem="OC5-dV-2mF" secondAttribute="leading" id="25L-3e-kLY"/>
                             <constraint firstItem="Ukf-4V-f1R" firstAttribute="top" secondItem="OC5-dV-2mF" secondAttribute="bottom" constant="34" id="3z4-7d-S75"/>
@@ -71,16 +102,29 @@
                             <constraint firstItem="Wjb-Yk-jlu" firstAttribute="top" secondItem="xVW-V6-QyJ" secondAttribute="bottom" constant="23" id="7lv-gZ-hiN"/>
                             <constraint firstItem="6Ti-o5-dHw" firstAttribute="top" secondItem="Smg-du-m5L" secondAttribute="bottom" constant="23" id="AqO-e8-fY3"/>
                             <constraint firstItem="OC5-dV-2mF" firstAttribute="top" secondItem="xVW-V6-QyJ" secondAttribute="bottom" constant="27" id="BzA-9J-wSR"/>
+                            <constraint firstItem="0Bf-5b-SBh" firstAttribute="top" secondItem="Qch-Jc-ssF" secondAttribute="bottom" constant="22" id="EBX-gv-uLT"/>
+                            <constraint firstItem="Qch-Jc-ssF" firstAttribute="top" secondItem="6Ti-o5-dHw" secondAttribute="bottom" constant="19" id="G7P-wK-0yx"/>
                             <constraint firstItem="Gtk-Ra-HzV" firstAttribute="width" secondItem="Ukf-4V-f1R" secondAttribute="width" id="GbH-bf-BkB"/>
                             <constraint firstItem="Wjb-Yk-jlu" firstAttribute="leading" secondItem="OC5-dV-2mF" secondAttribute="trailing" constant="9" id="HXJ-S4-LqS"/>
+                            <constraint firstItem="0Bf-5b-SBh" firstAttribute="leading" secondItem="Qch-Jc-ssF" secondAttribute="leading" id="HXv-Ye-oPW"/>
+                            <constraint firstItem="nBN-r4-vLx" firstAttribute="trailing" secondItem="Qch-Jc-ssF" secondAttribute="trailing" id="OQu-IB-mp0"/>
                             <constraint firstItem="Gtk-Ra-HzV" firstAttribute="top" secondItem="Ukf-4V-f1R" secondAttribute="bottom" constant="33" id="Ppq-na-E7m"/>
+                            <constraint firstItem="nBN-r4-vLx" firstAttribute="top" secondItem="Qch-Jc-ssF" secondAttribute="bottom" constant="22" id="Qid-wf-HRc"/>
                             <constraint firstItem="Gtk-Ra-HzV" firstAttribute="leading" secondItem="Ukf-4V-f1R" secondAttribute="leading" id="WeJ-R7-wyd"/>
                             <constraint firstItem="Smg-du-m5L" firstAttribute="leading" secondItem="Ukf-4V-f1R" secondAttribute="trailing" constant="9" id="boF-jh-LVV"/>
+                            <constraint firstItem="0Bf-5b-SBh" firstAttribute="centerY" secondItem="nBN-r4-vLx" secondAttribute="centerY" id="cBE-Bb-m9d"/>
+                            <constraint firstItem="Qch-Jc-ssF" firstAttribute="leading" secondItem="Gtk-Ra-HzV" secondAttribute="leading" id="dNP-oU-CqE"/>
                             <constraint firstItem="6Ti-o5-dHw" firstAttribute="leading" secondItem="Gtk-Ra-HzV" secondAttribute="trailing" constant="9" id="dqp-GN-xAC"/>
+                            <constraint firstItem="dfk-gv-Wb8" firstAttribute="top" secondItem="Qch-Jc-ssF" secondAttribute="bottom" constant="23" id="g5e-s1-10r"/>
                             <constraint firstItem="xVW-V6-QyJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iA8-x3-jPv"/>
                             <constraint firstItem="xVW-V6-QyJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="iez-kX-Ckd"/>
+                            <constraint firstItem="Qch-Jc-ssF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKA-pJ-d4g"/>
+                            <constraint firstItem="dfk-gv-Wb8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jaI-dU-mRV"/>
+                            <constraint firstItem="dfk-gv-Wb8" firstAttribute="leading" secondItem="Qch-Jc-ssF" secondAttribute="leading" id="k33-eX-mwb"/>
                             <constraint firstItem="OC5-dV-2mF" firstAttribute="leading" secondItem="xVW-V6-QyJ" secondAttribute="leading" id="kzp-FX-EcH"/>
+                            <constraint firstItem="dfk-gv-Wb8" firstAttribute="trailing" secondItem="Qch-Jc-ssF" secondAttribute="trailing" id="pWx-4E-rh8"/>
                             <constraint firstItem="Wjb-Yk-jlu" firstAttribute="trailing" secondItem="xVW-V6-QyJ" secondAttribute="trailing" id="pcI-Ur-Ipn"/>
+                            <constraint firstItem="6Ti-o5-dHw" firstAttribute="leading" secondItem="Qch-Jc-ssF" secondAttribute="trailing" constant="-404" id="sIC-9N-ZUV"/>
                             <constraint firstItem="Smg-du-m5L" firstAttribute="leading" secondItem="Ukf-4V-f1R" secondAttribute="trailing" constant="34" id="tfE-lL-VnP"/>
                             <constraint firstItem="xVW-V6-QyJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="uAc-s3-enA"/>
                             <constraint firstItem="xVW-V6-QyJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="xEC-f4-6vo"/>
@@ -90,6 +134,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="tfE-lL-VnP"/>
+                                <exclude reference="sIC-9N-ZUV"/>
                             </mask>
                         </variation>
                         <connections>
@@ -97,8 +142,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="dfk-gv-Wb8" id="5lO-Il-TA4"/>
+                        <outlet property="leftSwitch" destination="0Bf-5b-SBh" id="Wx0-aD-MiH"/>
                         <outlet property="nameField" destination="Wjb-Yk-jlu" id="ocn-dP-Gys"/>
                         <outlet property="numberField" destination="Smg-du-m5L" id="UHL-7D-8Fr"/>
+                        <outlet property="rightSwitch" destination="nBN-r4-vLx" id="k4p-AR-9pH"/>
                         <outlet property="sliderLabel" destination="Gtk-Ra-HzV" id="9iH-Ua-iUb"/>
                     </connections>
                 </viewController>
@@ -109,5 +157,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
