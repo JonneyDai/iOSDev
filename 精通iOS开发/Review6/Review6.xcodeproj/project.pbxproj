@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A77B8B01CD08EA000717E08 /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A77B8AF1CD08EA000717E08 /* crunch.wav */; };
+		0A77B8B21CD08EAC00717E08 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A77B8B11CD08EAC00717E08 /* win.wav */; };
 		0AF7E5A01CCF035B00280C9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7E59F1CCF035B00280C9B /* main.m */; };
 		0AF7E5A31CCF035B00280C9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7E5A21CCF035B00280C9B /* AppDelegate.m */; };
 		0AF7E5A91CCF035B00280C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF7E5A71CCF035B00280C9B /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A77B8AF1CD08EA000717E08 /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		0A77B8B11CD08EAC00717E08 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		0AF7E59B1CCF035B00280C9B /* Review6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF7E59F1CCF035B00280C9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AF7E5A11CCF035B00280C9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				0AF7E5C21CCF07EE00280C9B /* CustomPickerViewController.m */,
 				0AF7E5A71CCF035B00280C9B /* Main.storyboard */,
 				0AF7E5AA1CCF035B00280C9B /* Assets.xcassets */,
+				0A77B8AF1CD08EA000717E08 /* crunch.wav */,
+				0A77B8B11CD08EAC00717E08 /* win.wav */,
 				0AF7E5AC1CCF035B00280C9B /* LaunchScreen.storyboard */,
 				0AF7E5AF1CCF035B00280C9B /* Info.plist */,
 				0AF7E59E1CCF035B00280C9B /* Supporting Files */,
@@ -159,8 +165,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A77B8B01CD08EA000717E08 /* crunch.wav in Resources */,
 				0AF7E5AE1CCF035B00280C9B /* LaunchScreen.storyboard in Resources */,
 				0AF7E5AB1CCF035B00280C9B /* Assets.xcassets in Resources */,
+				0A77B8B21CD08EAC00717E08 /* win.wav in Resources */,
 				0AF7E5C51CCF822C00280C9B /* statedictionary.plist in Resources */,
 				0AF7E5A91CCF035B00280C9B /* Main.storyboard in Resources */,
 			);
@@ -328,6 +336,7 @@
 				0AF7E5B41CCF035B00280C9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

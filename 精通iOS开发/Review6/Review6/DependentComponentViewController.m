@@ -91,4 +91,11 @@
     }
 }
 
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
+    if (component == kZipComponent) {
+        return 90;
+    }else {
+        return  200;
+    }
+}
 @end

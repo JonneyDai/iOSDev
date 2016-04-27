@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -232,9 +233,54 @@
                     <view key="view" contentMode="scaleToFill" id="rPZ-zG-RFc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7b-tQ-hS4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="N0O-kB-WDC" id="HoL-p5-Mlq"/>
+                                    <outlet property="delegate" destination="N0O-kB-WDC" id="P1h-Lv-fp1"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8j-nt-QWq">
+                                <rect key="frame" x="265" y="278" width="71" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riA-Il-pE8">
+                                <rect key="frame" x="282" y="388" width="36" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="riA-Il-pE8" secondAttribute="height" multiplier="18:17" id="lVx-Dc-KHj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Spin"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lVx-Dc-KHj"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="N0O-kB-WDC" eventType="touchUpInside" id="EQq-ZU-guf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r7b-tQ-hS4" firstAttribute="top" secondItem="kfs-z9-VEv" secondAttribute="bottom" constant="-20" id="D0O-C1-UdN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r7b-tQ-hS4" secondAttribute="trailing" constant="-20" id="FtV-ZM-CKe"/>
+                            <constraint firstItem="r7b-tQ-hS4" firstAttribute="leading" secondItem="rPZ-zG-RFc" secondAttribute="leadingMargin" constant="-20" id="OqN-9m-iy4"/>
+                            <constraint firstItem="y8j-nt-QWq" firstAttribute="centerX" secondItem="rPZ-zG-RFc" secondAttribute="centerX" id="Wp2-XY-gHe"/>
+                            <constraint firstItem="riA-Il-pE8" firstAttribute="centerX" secondItem="rPZ-zG-RFc" secondAttribute="centerX" id="idl-n9-Oe0"/>
+                            <constraint firstItem="y8j-nt-QWq" firstAttribute="centerY" secondItem="rPZ-zG-RFc" secondAttribute="centerY" id="ovz-qw-5hM"/>
+                            <constraint firstItem="riA-Il-pE8" firstAttribute="top" secondItem="y8j-nt-QWq" secondAttribute="bottom" constant="66" id="xbS-Xc-UXJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="5aY-t6-NB5"/>
+                    <connections>
+                        <outlet property="button" destination="riA-Il-pE8" id="M45-AR-8C9"/>
+                        <outlet property="customPicker" destination="r7b-tQ-hS4" id="OCk-VF-A6P"/>
+                        <outlet property="winLabel" destination="y8j-nt-QWq" id="iYq-Z6-VtX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKM-Ie-l4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
