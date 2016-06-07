@@ -41,7 +41,7 @@ NSUInteger leftIndex=0;//左侧选中索引
     _tableView.dataSource=self;
     [_tableView setTag:101];
     
-    _tableView.backgroundColor = [UIColor redColor];
+//    _tableView.backgroundColor = [UIColor redColor];
     
     _tableView.separatorStyle=UITableViewCellStyleDefault;//UITableViewCellSeparatorStyleNone;
     
@@ -92,8 +92,9 @@ NSUInteger leftIndex=0;//左侧选中索引
                         Success:^(id responseObject){
                             int error_code = [[responseObject objectForKey:@"error_code"] intValue];
                             if (!error_code) {
-//                                NSLog(@" %@", responseObject);
                                 _dataSource=[TagModel objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"]];
+                                NSLog(@"01010101010%@565656565%@", responseObject,_dataSource);
+
                                 [_tableView reloadData];
                                 //设置默认选中第一行
                                 NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
