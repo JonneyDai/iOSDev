@@ -13,6 +13,7 @@
 		0A6C30E81CFEB1F9008136BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6C30E61CFEB1F9008136BA /* Main.storyboard */; };
 		0A6C30EA1CFEB1F9008136BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6C30E91CFEB1F9008136BA /* Assets.xcassets */; };
 		0A6C30ED1CFEB1F9008136BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6C30EB1CFEB1F9008136BA /* LaunchScreen.storyboard */; };
+		0A6C30F61CFED06A008136BA /* studentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C30F51CFED06A008136BA /* studentInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		0A6C30E91CFEB1F9008136BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A6C30EC1CFEB1F9008136BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A6C30EE1CFEB1F9008136BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6C30F41CFED06A008136BA /* studentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentInfo.h; sourceTree = "<group>"; };
+		0A6C30F51CFED06A008136BA /* studentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				0A6C30E11CFEB1F9008136BA /* AppDelegate.m */,
 				0A6C30E31CFEB1F9008136BA /* ViewController.h */,
 				0A6C30E41CFEB1F9008136BA /* ViewController.m */,
+				0A6C30F41CFED06A008136BA /* studentInfo.h */,
+				0A6C30F51CFED06A008136BA /* studentInfo.m */,
 				0A6C30E61CFEB1F9008136BA /* Main.storyboard */,
 				0A6C30E91CFEB1F9008136BA /* Assets.xcassets */,
 				0A6C30EB1CFEB1F9008136BA /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 				0A6C30E51CFEB1F9008136BA /* ViewController.m in Sources */,
 				0A6C30E21CFEB1F9008136BA /* AppDelegate.m in Sources */,
 				0A6C30DF1CFEB1F9008136BA /* main.m in Sources */,
+				0A6C30F61CFED06A008136BA /* studentInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UserDefaultTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonneydai.UserDefaultTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UserDefaultTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonneydai.UserDefaultTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +308,7 @@
 				0A6C30F31CFEB1F9008136BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
