@@ -262,6 +262,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+<<<<<<< HEAD
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jonneydai@gmail.com (B6DWU3U7YK)";
+=======
+>>>>>>> 9ecac9d4e7819768c1efaf9bc81bb75422228540
 				INFOPLIST_FILE = Review7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,7 +278,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jonneydai@gmail.com (B6DWU3U7YK)";
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> 9ecac9d4e7819768c1efaf9bc81bb75422228540
 				INFOPLIST_FILE = Review7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
