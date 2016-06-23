@@ -47,6 +47,7 @@
     [self btnClickChange];
     
 }
+
 - (IBAction)rightBtnOnClick:(UIButton *)sender {
     self.index++;
     [self btnClickChange];

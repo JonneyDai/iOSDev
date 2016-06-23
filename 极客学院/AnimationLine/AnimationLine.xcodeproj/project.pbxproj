@@ -212,7 +212,6 @@
 				TargetAttributes = {
 					0AF6A9971D05C0D300A665AE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WCM3XS4G7J;
 					};
 					0AF6A9B01D05C0D300A665AE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -424,7 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AnimationLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
@@ -439,7 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AnimationLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
@@ -515,6 +514,7 @@
 				0AF6A9C71D05C0D300A665AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF6A9C81D05C0D300A665AE /* Build configuration list for PBXNativeTarget "AnimationLineTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +523,7 @@
 				0AF6A9CA1D05C0D300A665AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF6A9CB1D05C0D300A665AE /* Build configuration list for PBXNativeTarget "AnimationLineUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +532,7 @@
 				0AF6A9CD1D05C0D300A665AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
