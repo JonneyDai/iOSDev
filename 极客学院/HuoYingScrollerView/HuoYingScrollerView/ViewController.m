@@ -27,7 +27,7 @@ CGFloat pageCtrlWidth = 200;
     [super viewDidLoad];
     [self initSrollView];
     [self initPageCtrl];
-    [self addTimer];
+//    [self addTimer];
     
 }
 //创建ScrollView
@@ -54,28 +54,28 @@ CGFloat pageCtrlWidth = 200;
     self.pageCtrl.currentPageIndicatorTintColor = [UIColor lightGrayColor];
     [self.view insertSubview:self.pageCtrl aboveSubview:self.scrollView];
 }
-//添加定时器
--(void) addTimer{
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSDefaultRunLoopMode];
-}
-
-//跳动到下一页
--(void)nextPage{
-    NSInteger page = self.pageCtrl.currentPage;
-    page++;
-    if (page == kImgCount) {
-        page = 0;
-    }
-    CGPoint point = CGPointMake(kScreenWidth * page, 0);
-    [self.scrollView setContentOffset:point animated:YES]; //设置偏移量
-}
-
-//停止定时器
--(void) removeTimer{
-    [self.timer invalidate];
-    self.timer = nil;
-}
+////添加定时器
+//-(void) addTimer{
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSDefaultRunLoopMode];
+//}
+//
+////跳动到下一页
+//-(void)nextPage{
+//    NSInteger page = self.pageCtrl.currentPage;
+//    page++;
+//    if (page == kImgCount) {
+//        page = 0;
+//    }
+//    CGPoint point = CGPointMake(kScreenWidth * page, 0);
+//    [self.scrollView setContentOffset:point animated:YES]; //设置偏移量
+//}
+//
+////停止定时器
+//-(void) removeTimer{
+//    [self.timer invalidate];
+//    self.timer = nil;
+//}
 
 #pragma mark ScrollViewDelegate
 //页面滑动的时候更新当前页码
@@ -86,17 +86,17 @@ CGFloat pageCtrlWidth = 200;
     
 }
 
-//当视图将要拖动的时候
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [self removeTimer];
-}
-//当视图停止拖拽的时候
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self addTimer];
-    });
-
-}
+////当视图将要拖动的时候
+//-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+//    [self removeTimer];
+//}
+////当视图停止拖拽的时候
+//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self addTimer];
+//    });
+//
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

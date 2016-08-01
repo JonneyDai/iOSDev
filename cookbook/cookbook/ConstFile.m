@@ -9,7 +9,7 @@
 #import "ConstFile.h"
 
 #warning 修改成自己在聚合上的OpenID
- NSString * OpenID=@"JH93471cca99ecd4699aacddd8ebfe9e40";
+ NSString * OpenID=@"JH5e33c79437f2a4af614291c4c57f4441";
  NSString * APPID=@"46";
  NSString * Method_Get=@"GET";
  NSString * Method_Post=@"POST";
