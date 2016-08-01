@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSK-ZZ-NjF">
+                                <rect key="frame" x="244" y="350" width="113" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMsgBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOV-ki-a0C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzq-0e-G1d">
+                                <rect key="frame" x="203" y="283" width="195" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Call My Darling Family Tel"/>
+                                <connections>
+                                    <action selector="callMeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Go0-KG-AvX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-ys-Sod">
+                                <rect key="frame" x="202.5" y="213" width="195" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Call My Darling Work Tel"/>
+                                <connections>
+                                    <action selector="CallWorkBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngA-Ta-Q5F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nzq-0e-G1d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BY6-VH-ELW"/>
+                            <constraint firstItem="Nzq-0e-G1d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fq8-6U-Ees"/>
+                            <constraint firstItem="TSK-ZZ-NjF" firstAttribute="top" secondItem="Nzq-0e-G1d" secondAttribute="bottom" constant="34" id="SeF-fc-xFT"/>
+                            <constraint firstItem="Nzq-0e-G1d" firstAttribute="top" secondItem="dJD-ys-Sod" secondAttribute="bottom" constant="37" id="bEU-Dx-hq5"/>
+                            <constraint firstItem="dJD-ys-Sod" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iz4-BW-TEq"/>
+                            <constraint firstItem="TSK-ZZ-NjF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohT-ZY-bhE"/>
+                            <constraint firstItem="dJD-ys-Sod" firstAttribute="height" secondItem="Nzq-0e-G1d" secondAttribute="height" id="xC8-U7-r8s"/>
+                            <constraint firstItem="dJD-ys-Sod" firstAttribute="width" secondItem="Nzq-0e-G1d" secondAttribute="width" id="xIZ-nq-g73"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
