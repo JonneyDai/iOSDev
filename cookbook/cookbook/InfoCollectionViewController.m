@@ -131,7 +131,7 @@ static int pn=0;
         NSDictionary *parms=@{
                               @"menu":_searchText,
                               @"pn": [NSString stringWithFormat:@"%d",pn],
-                              @"rn":@"30"
+                              @"rn":@"3"
                               };
         [juheapi executeWorkWithAPI:API_query
                               APIID:APPID
@@ -140,13 +140,10 @@ static int pn=0;
                             Success:^(id responseObject){
                                 int error_code = [[responseObject objectForKey:@"error_code"] intValue];
                                 if (!error_code) {
-//                                      NSLog(@"09090909090%@", responseObject);
+                                      NSLog(@"09090909090%@", responseObject);
     
                                     if (pn==0) {
                                         _dataSource=[InfoModel objectArrayWithKeyValuesArray:[[responseObject objectForKey:@"result"] objectForKey:@"data"]];
-//                                        NSLog(@"121212121%@",_dataSource);
-                                        
-//                                        NSLog(@"343434343%@",[InfoModel objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"]]);
 
                                     }else{
                                         NSArray* arry=[InfoModel objectArrayWithKeyValuesArray:[[responseObject objectForKey:@"result"] objectForKey:@"data"]];

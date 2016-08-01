@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A385F751D49ABA600420698 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A385F741D49ABA600420698 /* libstdc++.tbd */; };
 		0AEBD9E61CB7B203007EAC12 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBD9E51CB7B203007EAC12 /* Reveal.framework */; };
 		0AEBD9E81CB7B2CA007EAC12 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBD9E71CB7B2CA007EAC12 /* libz.tbd */; };
 		9F452A9E1B774DBF003202B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F452A9D1B774DBF003202B3 /* main.m */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		020DF53DEA50E38959D6DCF5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A385F741D49ABA600420698 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		0AEBD9E51CB7B203007EAC12 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		0AEBD9E71CB7B2CA007EAC12 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5482050CA9FD5E5B360EA90A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A385F751D49ABA600420698 /* libstdc++.tbd in Frameworks */,
 				9F906F551B88BC1300B81221 /* AdSupport.framework in Frameworks */,
 				0AEBD9E81CB7B2CA007EAC12 /* libz.tbd in Frameworks */,
 				0AEBD9E61CB7B203007EAC12 /* Reveal.framework in Frameworks */,
@@ -306,6 +309,7 @@
 		FCB5247ED3DAB3A70345242E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A385F741D49ABA600420698 /* libstdc++.tbd */,
 				0AEBD9E71CB7B2CA007EAC12 /* libz.tbd */,
 				9F906F501B88B56200B81221 /* SystemConfiguration.framework */,
 				9F906F4E1B88B54C00B81221 /* Security.framework */,
